@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherie Box 🎀 Sweet Coquette Mystery</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Coquette & Estetik -->
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
+   
+    <!-- 🎀 SPLASH SCREEN OPENING 🎀 -->
+<div id="intro-screen">
+    <div class="intro-content">
+        <div class="intro-logo">Cherie<span>Box 🎀</span></div>
+        <div class="intro-line"></div>
+        <p class="intro-subtitle">Unboxing Your Dreams...</p>
+    </div>
+    <!-- Partikel Kilauan -->
+    <div class="intro-sparkle s-2">🌸</div>
+</div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Cherie<span>Box 🎀</span></div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="buka('home')">Home</a></li>
+            <li><a href="#" onclick="buka('produk')">Produk</a></li>
+            <li><a href="#" onclick="buka('tentang')">Tentang</a></li>
+            <li><a href="#" onclick="buka('kontak')">Kontak</a></li>
+            <li><a href="#" onclick="buka('pemesanan')">Pemesanan</a></li>
+        </ul>
+        <div class="nav-extra">
+            <a href="#" onclick="buka('keranjang')">🦢 Keranjang</a>
+        </div>
+    </nav>
+
+
+<!-- HALAMAN KERANJANG -->
+<section id="keranjang" class="halaman">
+    <div class="product-header">
+        <div class="header-decoration">🛒 ✨ 🎀</div>
+        <h2 class="section-title">Keranjang Belanja</h2>
+        <p class="section-subtitle">Daftar produk manis yang sudah kamu pilih 🌷</p>
+    </div>
+
+    <div class="box-info" style="max-width: 600px; margin: 0 auto; background: white; padding: 25px; border-radius: 20px; border: 2px solid #ffdeeb;">
+        <!-- Daftar produk di keranjang -->
+        <div id="isi-keranjang">
+            <p style="text-align: center; color: #bbb; padding: 20px;">Keranjangmu masih kosong... 🎀</p>
+        </div>
+
+        <div style="border-top: 2px dashed #ffdeeb; margin: 20px 0;"></div>
+
+        <div style="display: flex; justify-content: space-between; font-weight: bold; color: #d88193; font-size: 1.1em;">
+            <span>Total Belanja:</span>
+            <span id="total-di-keranjang">Rp 0</span>
+        </div>
+
+        <!-- Tombol Lanjut ke Checkout -->
+        <div style="margin-top: 25px;">
+            <button class="btn-main" style="width: 100%;" onclick="buka('pemesanan')">Lanjut ke Checkout 💌</button>
+        </div>
+    </div>
+</section>
+
+        <!-- HALAMAN HOME -->
+        <section id="home" class="halaman aktif">
+            <!-- Elemen Dekorasi Melayang -->
+            <div class="floating-deco deco-1">🎀</div>
+            <div class="floating-deco deco-2">🍒</div>
+            <div class="floating-deco deco-4">🌷</div>
+
+            <!-- Bagian Hero dengan Flex Layout -->
+            <div class="hero">
+                
+                <!-- Sisi Kiri: Teks -->
+               <div class="hero-content">
+                    <p class="teks-atas">Special Surprise for You 🌷</p>
+                    <h1>Cherie <span>Surprise</span></h1>
+                    <p class="hero-desc">Dapatkan koleksi aksesoris, perhiasan mutiara, dan barang aesthetic lainnya dalam satu kotak penuh cinta.</p>
+                    <button class="btn-main" onclick="buka('produk')">Explore Produk ✨</button>
+                </div>
+
+                <!-- Sisi Kanan: Animasi Pengganti Foto -->
+                <div class="hero-image-container">
+                 <div class="hero-image-wrapper animation-box">
+    <!-- Isi Surprise yang meloncat keluar -->
+    <div class="surprise-group">
+        <span class="item s-1">💍</span>
+        <span class="item s-2">🎀</span>
+        <span class="item s-3">💄</span>
+        <span class="item s-4">✨</span>
+        <span class="item s-5">🌸</span>
+    </div>
+    
+    <!-- Kotak Kado yang "Empuk" -->
+    <div class="gift-container">
+        <div class="gift-lid-wrapper">
+            <div class="lid-bow">🎀</div> <!-- Pita di atas tutup -->
+            <div class="gift-lid"></div>
+        </div>
+        <div class="gift-body">
+            <div class="gift-ribbon-v"></div> <!-- Pita vertikal -->
+        </div>
+    </div>
+    
+    <div class="glow-cloud"></div>
+</div>   
+    
+    <!-- Efek Cahaya dari dalam box -->
+    <div class="glow-effect"></div>
+</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HALAMAN PRODUK -->
+        <section id="produk" class="halaman">
+    <div class="product-header">
+        <div class="header-decoration">🎀 ✨ 🎀</div>
+        <h2 class="section-title">Cherie Catalog</h2>
+        <p class="section-subtitle">Temukan keajaiban kecil di setiap koleksi kami 🌷</p>
+
+<!-- Input Search Produk -->
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Cari produk favoritmu...">
+    <button type="submit">Cari</button>
+</div>
+
+<!-- --- KATEGORI 1: SIGNATURE SURPRISE BOX --- -->
+    <div class="category-wrapper">
+        <div class="category-tag">🎁 Signature Surprise Box</div>
+        <div class="grid-creative">
+            <!-- Box 1 -->
+            <div class="card-premium">
+                <div class="card-img-container">
+                    <img src="https://i.ibb.co.com/399YJS1t/IMG-20260429-WA0098.jpg">
+                    <div class="card-badge">Best Seller</div>
+                </div>
+                <div class="card-info">
+                    <h3>Blush Pearl Box</h3>
+                    <p>Paket kalung mutiara & pouch satin.</p>
+                    <div class="card-footer"><span class="price">Rp 75.000</span><button class="btn-add" onclick="tambahCart('Blush Pearl Box', 75000)">+</button></div>
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="card-premium">
+                <div class="card-img-container"><img src="https://i.ibb.co.com/XZ9SZjvb/IMG-20260429-WA0100.jpg"></div>
+                <div class="card-info"><h3>Cherry Pie Box</h3><p>Box bertema ceri merah yang ceria.</p><div class="card-footer"><span class="price">Rp 120.000</span><button class="btn-add" onclick="tambahCart('Cherry Pie Box', 120000)">+</button></div></div>
+            </div>
+            <!-- Box 3 -->
+            <div class="card-premium">
+                <div class="card-img-container"><img src="https://i.ibb.co.com/tPYWpdyY/IMG-20260429-WA0103.jpg"></div>
+                <div class="card-info"><h3>Midnight Velvet</h3><p>Surprise box edisi hitam elegan.</p><div class="card-footer"><span class="price">Rp 135.000</span><button class="btn-add" onclick="tambahCart('Midnight Velvet', 135000)">+</button></div></div>
+            </div>
+            <!-- Box 4 -->
+            <div class="card-premium">
+                <div class="card-img-container"><img src="https://i.ibb.co.com/DD690P98/IMG-20260429-WA0102.jpg"></div>
+                <div class="card-info"><h3>Lavender Dream</h3><p>Aksesoris ungu wangi lavender.</p><div class="card-footer"><span class="price">Rp 95.000</span><button class="btn-add" onclick="tambahCart('Lavender Dream', 95000)">+</button></div></div>
+            </div>
+            <!-- Box 5 -->
+            <div class="card-premium">
+                <div class="card-img-container"><img src="https://i.ibb.co.com/cKy3CKSh/IMG-20260429-WA0104.jpg"></div>
+                <div class="card-info"><h3>Sunny Day Box</h3><p>Kecerahan dalam satu box kuning.</p><div class="card-footer"><span class="price">Rp 88.000</span><button class="btn-add" onclick="tambahCart('Sunny Day Box', 88000)">+</button></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- KATEGORI 2: ELEGANT JEWELRY --- -->
+    <div class="category-wrapper">
+        <div class="category-tag">💍 Elegant Jewelry</div>
+        <div class="grid-creative">
+            <!-- Item 6 -->
+            <div class="card-premium">
+                <div class="card-img-container"><img src="https://i.ibb.co.com/TMNf1j2Y/IMG-20260430-WA0000.jpg"></div>
+                <div class="card-info"><h3>Ribbon Ring Set</h3><p>3 Cincin pita perak minimalis.</p><div class="card-footer"><span class="price">Rp 45.000</span><button class="btn-add" onclick="tambahCart('Ribbon Ring Set', 45000)">+</button></div></div>
+            </div>
+            <!-- Item 7 -->
+            <div class="card-premium">
+                <div class="card-img-container"><img src="https://i.ibb.co.com/rYD7Jhj/IMG-20260430-WA0002.jpg"></div>
+                <div class="card-info"><h3>Heart Necklace</h3><p>Kalung hati emas 18k coating.</p><div class="card-footer"><span class="price">Rp 55.000</span><button class="btn-add" onclick="tambahCart('Heart Necklace', 55000)">+</button></div></div>
+            </div>
+            <!-- Item 8 -->
+            <div class="card-premium">
+                <div class="card-img-container"><img src="https://i.ibb.co.com/Hf5zQPtJ/IMG-20260430-WA0003.jpg"></div>
+                <div class="card-info"><h3>Pearl Earrings</h3><p>Anting mutiara klasik mewah.</p><div class="card-footer"><span class="price">Rp 35.000</span><button class="btn-add" onclick="tambahCart('Pearl Earrings', 35000)">+</button></div></div>
+            </div>
+            <!-- Item 9 -->
+            <div class="card-premium">
+                <div class="card-img-container"><img src="https://i.ibb.co.com/8gHxMDVK/IMG-20260430-WA0004.jpg"></div>
+                <div class="card-info"><h3>Moonlight Bracelet</h3><p>Gelang perak bandul bulan.</p><div class="card-footer"><span class="price">Rp 42.000</span><button class="btn-add" onclick="tambahCart('Moonlight Bracelet', 42000)">+</button></div></div>
+            </div>
+            <!-- Item 10 -->
+            <div class="card-premium">
+                <div class="card-img-container"><img src="https://i.ibb.co.com/BVCm0NdC/IMG-20260430-WA0005.jpg"></div>
+                <div class="card-info"><h3>Initial Necklace</h3><p>Kalung inisial custom (A-Z).</p><div class="card-footer"><span class="price">Rp 60.000</span><button class="btn-add" onclick="tambahCart('Initial Necklace', 60000)">+</button></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- KATEGORI 3: HAIR ACCESSORIES --- -->
+    <div class="category-wrapper">
+        <div class="category-tag">🎀 Hair Accessories</div>
+        <div class="grid-creative">
+            <!-- Item 11 -->
+            <div class="card-premium">
+                <div class="card-img-container"><img src="https://i.ibb.co.com/nqyL6NR4/IMG-20260430-WA0008.jpg"></div>
+                <div class="card-info"><h3>Silk Scrunchie</h3><p>Ikat rambut sutra anti rontok.</p><div class="card-footer"><span class="price">Rp 15.000</span><button class="btn-add" onclick="tambahCart('Silk Scrunchie', 15000)">+</button></div></div>
+            </div>
+            <!-- Item 12 -->
+            <div class="card-premium">
+                <div class="card-img-container"><img src="https://i.ibb.co.com/hxpLBxvB/IMG-20260430-WA0007.jpg"></div>
+                <div class="card-info"><h3>Giant Bow Clip</h3><p>Jepit pita raksasa Coquette.</p><div class="card-footer"><span class="price">Rp 28.000</span><button class="btn-add" onclick="tambahCart('Giant Bow Clip', 28000)">+</button></div></div>
+            </div>
+            <!-- Item 13 -->
+            <div class="card-premium">
+                <div class="card-img-container"><img src="https://i.ibb.co.com/k6GCcVRt/IMG-20260430-WA0009.jpg"></div>
+                <div class="card-info"><h3>Tulip Hairpin</h3><p>Pin rambut motif bunga tulip.</p><div class="card-footer"><span class="price">Rp 20.000</span><button class="btn-add" onclick="tambahCart('Tulip Hairpin', 20000)">+</button></div></div>
+            </div>
+            <!-- Item 14 -->
+            <div class="card-premium">
+                <div class="card-img-container"><img src="https://i.ibb.co.com/kNY9zYF/IMG-20260430-WA0006.jpg"></div>
+                <div class="card-info"><h3>Vintage Headband</h3><p>Bando kain motif bunga vintage.</p><div class="card-footer"><span class="price">Rp 32.000</span><button class="btn-add" onclick="tambahCart('Vintage Headband', 32000)">+</button></div></div>
+            </div>
+            <!-- Item 15 -->
+            <div class="card-premium">
+                <div class="card-img-container"><img src="https://i.ibb.co.com/3YPqqGgM/IMG-20260430-WA0010.jpg"></div>
+                <div class="card-info"><h3>Claw Clip Set</h3><p>Isi 3 jepit badai warna pastel.</p><div class="card-footer"><span class="price">Rp 25.000</span><button class="btn-add" onclick="tambahCart('Claw Clip Set', 25000)">+</button></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION TENTANG (CHERIE BOX - EXCLUSIVE EDITION) -->
+<section id="tentang" class="halaman">
+    <div class="container-premium">
+        
+        <!-- Bagian Header (Animated & Elegant) -->
+        <div class="header-story">
+            <span class="subtitle">Since 2026</span>
+            <h2 class="section-title">Our Story 🦢</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="about-grid">
+            
+            <!-- Sisi Kiri: Narasi & Philosophy -->
+            <div class="about-content">
+                <h3>Keanggunan dalam Setiap Simpul</h3>
+                <p>
+                    <strong>Cherie Box</strong> lahir dari sebuah filosofi sederhana: bahwa setiap pemberian adalah bahasa cinta yang tak terucap. Nama <em>'Cherie'</em> yang berarti 'tersayang' menjadi komitmen kami untuk menghadirkan keajaiban kecil di setiap kotak yang Anda buka.
+                </p>
+                <p>
+                    Kami mendedikasikan diri pada segala sesuatu yang manis. Bagi kami, kemasan bukan sekadar pembungkus; ia adalah kesan pertama dari sebuah kenangan yang akan terus diingat.
+                </p>
+                
+                <!-- Badge Nilai Plus (Aesthetic Items) -->
+                <div class="feature-short">
+                    <div class="item">✨ Premium Quality</div>
+                    <div class="item">🎀 Hand-Tied Ribbon</div>
+                    <div class="item">🤍 Made with Love</div>
+                </div>
+            </div>
+
+            <!-- Sisi Kanan: Organic Quote Card (Bentuk Blob) -->
+            <div class="about-card">
+                <div class="card-inner">
+                    <!-- Icon Pemanis -->
+                    <div style="font-size: 2rem; margin-bottom: 10px;">🕊️</div>
+                    <p class="quote">"Because every gift tells a story, and we make sure yours is beautiful."</p>
+                    <div class="signature">With love, Cherie</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+        
+         <!-- 6. HALAMAN KONTAK -->
+<section id="kontak" class="halaman">
+    <div class="product-header">
+        <div class="header-decoration">💌 ✨ 💌</div>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">Punya pertanyaan? Kami senang mendengarnya! 🎀</p>
+    </div>
+
+    <div class="contact-container">
+        <!-- Kartu Info Kontak -->
+        <div class="contact-info-grid">
+            <div class="contact-card">
+                <div class="contact-icon">📱</div>
+                <h4>WhatsApp</h4>
+                <p>+62 8xx-xxxx-xxxx</p>
+                <a href="https://wa.me/6281253113500" target="_blank" class="contact-link">Chat Sekarang →</a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">📸</div>
+                <h4>Instagram</h4>
+                <p>@cheriebox.official</p>
+                <a href="https://www.instagram.com/clstrmdnyy_?igsh=MThidnhhcGk4c255OA==" class="contact-link">Follow Us →</a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">📍</div>
+                <h4>Studio</h4>
+                <p>Lunjuk Jaya, Palembang</p>
+                <p class="small-text">(Online Shop Only)</p>
+            </div>
+        </div>
+
+
+        <!-- Pesan Penutup -->
+        <div class="box-info" style="margin-top: 40px;">
+            <p>Operasional: <strong>Senin - Sabtu (09.00 - 17.00 WIB)</strong></p>
+            <p style="font-size: 0.9rem; color: #d88194; margin-top: 10px;">Kami akan membalas pesanmu secepat kilat dengan penuh cinta! 🌸</p>
+        </div>
+    </div>
+</section>
+           
+<!-- HALAMAN PEMESANAN -->
+<section id="pemesanan" class="halaman">
+    <div class="product-header">
+        <div class="header-decoration">💌 ✨ 🎀</div>
+        <h2 class="section-title">Checkout & Receipt</h2>
+    </div>
+
+    <!-- AREA STRUK YANG AKAN DICETAK -->
+    <div id="printable-receipt" class="box-info" style="max-width: 600px; margin: 0 auto; background: white; padding: 30px; border: 2px solid #ffdeeb; border-radius: 20px; position: relative;">
+        
+        <!-- HEADER STRUK -->
+<div style="text-align: center; border-bottom: 2px dashed #ffdeeb; padding-bottom: 15px; margin-bottom: 20px;">
+    <h3 style="color: #d88193; margin: 0;">CHERIE BOX OFFICIAL</h3>
+    <p style="font-size: 0.8em; color: #888; margin: 5px 0;">Surprise in Every Box 🎀</p>
+    <div style="display: flex; justify-content: space-between; font-size: 0.75em; margin-top: 10px; color: #555;">
+        <span id="invoice-num"></span>
+        <span id="date-now"></span>
+    </div>
+</div>
+
+        <!-- Daftar Barang -->
+        <div id="isi-checkout" style="font-size: 0.9em; min-height: 50px;">
+            <p style="color:#bbb; text-align: center;">Belum ada produk...</p>
+        </div>
+
+        <!-- Rincian Biaya -->
+        <div style="border-top: 1px solid #eee; margin-top: 15px; padding-top: 10px; font-size: 0.9em;">
+            <div style="display: flex; justify-content: space-between;">
+                <span>Ongkos Kirim:</span>
+                <span id="ongkir-text">Rp 0</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1em; color: #d88193; margin-top: 10px;">
+                <span>TOTAL LUNAS:</span>
+                <span id="total-di-checkout">Rp 0</span>
+            </div>
+        </div>
+
+        <!-- Tanda Bukti Lunas (Stempel) -->
+        <div id="stempel-lunas" style="border: 3px double #4CAF50; color: #4CAF50; width: fit-content; padding: 5px 15px; border-radius: 5px; transform: rotate(-15deg); font-weight: bold; margin: 20px auto; display: none;">
+            LUNAS - PAID 🌸
+        </div>
+
+        <!-- AREA INFO PEMBAYARAN (TAMPIL DI HALAMAN PEMESANAN) -->
+<div class="payment-info-box" style="margin-top: 20px; padding: 15px; border: 2px solid #ffdeeb; border-radius: 15px; background: #fffcfd;">
+    <p style="font-weight: bold; color: #d88193; text-align: center; margin-bottom: 15px;">💳 Pilihan Pembayaran</p>
+    
+    <div style="display: grid; grid-template-columns: 1fr; gap: 15px; font-size: 0.85em; color: #555;">
+        
+        <!-- Kolom Transfer Bank -->
+        <div style="border-bottom: 1px dashed #ffdeeb; padding-bottom: 10px;">
+            <strong>🏦 Transfer Bank (BCA)</strong><br>
+            No. Rek: <span style="color: #d88193; font-weight: bold;">1234 5678 90</span><br>
+            A/n: Cherie Box Official
+        </div>
+
+        <!-- Kolom E-Wallet -->
+        <div style="border-bottom: 1px dashed #ffdeeb; padding-bottom: 10px;">
+            <strong>📱 Dana / OVO / GoPay</strong><br>
+            No. HP: <span style="color: #d88193; font-weight: bold;">0812-5311-3500</span><br>
+            A/n: Cherie Box Official
+        </div>
+
+        <!-- Kolom QRIS -->
+        <div style="text-align: center;">
+            <strong>🖼️ Scan QRIS (All Payment)</strong><br>
+            <!-- Ganti src di bawah dengan link foto QRIS kamu -->
+            <img src="https://i.ibb.co.com/wFGYVP9h/IMG-20260430-WA0014.jpg" alt="QRIS Cherie Box" style="width: 120px; border: 3px solid #ffdeeb; border-radius: 10px; margin-top: 8px;">
+            <p style="font-size: 0.7em; color: #888; margin-top: 5px;">*Scan pakai m-Banking atau E-Wallet apa saja</p>
+        </div>
+
+    </div>
+</div>
+        
+        <!-- Form Input (Disembunyikan saat cetak otomatis lewat CSS) -->
+        <form id="order-form" class="no-print" style="margin-top: 20px;">
+            <input type="text" id="nama-pembeli" placeholder="Nama Cantikmu" class="input-field">
+            <textarea id="alamat-pembeli" placeholder="Alamat Rumah Lengkap" class="input-field" style="height: 60px;"></textarea>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+                <select id="pilihan-ekspedisi" class="input-field" onchange="updateTampilanSemua()">
+                    <option value="0" disabled selected>Pilih Ekspedisi</option>
+                    <option value="10000">J&T (Rp 10.000)</option>
+                    <option value="12000">JNE (Rp 12.000)</option>
+                    <option value="9000">SiCepat (Rp 9.000)</option>
+                </select>
+
+                   <select id="metode-bayar" class="input-field">
+            <div id="instruksi-pembayaran-teks" style="margin-top: 15px; padding: 15px; background: #fff5f7; border: 1px dashed #ffb7c5; border-radius: 12px; display: none; font-size: 0.85em; text-align: center;">
+</div>
+                    <option value="" disabled selected>Pembayaran</option>
+                    <option value="Transfer Bank">Transfer Bank</option>
+                    <option value="QRIS">QRIS (Scan Barcode)</option>
+                    <option value="E-Wallet">Dana, GoPay, OVO</option>
+                    <option value="COD">COD (Bayar di Tempat)</option>
+</select> 
+                </select>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px;">
+                <button type="button" class="btn-main" onclick="cetakBukti()" style="background: #f0f0f0; color: #555;">Cetak Bukti 🖨️</button>
+                <button type="button" class="btn-main" onclick="kirimPesanan()">Kirim ke WA 🎀</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<audio id="bg-music" loop autoplay muted>
+    <source src="c:\Users\Asus\Downloads\WhatsApp Video 2026-04-25 at 22.28.53.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
